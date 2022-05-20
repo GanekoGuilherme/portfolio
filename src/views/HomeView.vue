@@ -8,16 +8,15 @@
       <h1
         class="font-family-poppins font-semibold text-primary text-5xl mobile:text-4xl whitespace-nowrap mb-7"
       >
-        Dev Full-stack
+        Dev Back-end
       </h1>
       <h3
         class="font-family-poppins font-medium text-2xl whitespace-nowrap mb-7"
       >
-        Guilherme Massaru
+        Guilherme Massaru Ganeko
       </h3>
       <p class="text-justify mb-7">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pulvinar
-        facilisis libero, sed volutpat sem feugiat ac.
+        Bacharel em Engenharia da Computação pelo Instituto Federal do Triângulo Mineiro (2022), comecei programar aos 14 anos. Participei de competições como os torneios FLL (First Lego League), OBR (Olímpiada Brasileira de Robótica), maratonas de programação e hackathons.
       </p>
       <div>
         <button
@@ -38,7 +37,7 @@
         </button>
       </div>
     </div>
-    <img src="@/assets/dev.svg" alt="" class="w-1/2 mobile:w-[230px]" />
+    <img src="@/assets/dev.svg" alt="" class="w-1/2 ml-20 mobile:w-[230px] mobile:ml-0" />
   </div>
 </template>
 
