@@ -1,12 +1,8 @@
 <template>
   <div
-    class="flex flex-col items-center justify-evenly mobile:justify-start mx-30 mt-6 mb-5 relative"
+    class="flex flex-col items-center justify-evenly mobile:justify-start mx-30 mt-6 mb-5 relative news-img "
   >
-    <img
-      src="@/assets/icons/bg.svg"
-      class="absolute top-0 right-0 z-[-5] mobile:opacity-50"
-    />
-    <h1 class="font-family-poppins font-semibold text-4xl mb-7">Resumo</h1>
+  <h1 class="font-family-poppins font-semibold text-4xl mb-7">Resumo</h1>
     <h2
       class="subline-destaque mobile:text-xl font-family-poppins font-medium text-3xl mb-2"
     >

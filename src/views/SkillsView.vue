@@ -1,10 +1,8 @@
 <template>
-  <div class="flex flex-col items-center mx-30 mt-6 mb-5 overflow-hidden relative">
-    <img
-      src="@/assets/icons/bg.svg"
-      class="absolute top-0 right-0 z-[-5] mobile:opacity-50"
-    />
-    <h1 class="font-family-poppins font-semibold text-4xl mb-7 mobile:mb-5">
+  <div class="flex flex-col items-center mx-30 mt-6 overflow-hidden relative news-img ">
+    
+    <div class="flex flex-col items-center mx-30 overflow-hidden relative bg-white">
+    <h1 class="font-family-poppins font-semibold text-4xl mb-7 mobile:mb-5 mt-10">
       Habilidades
     </h1>
     <div
@@ -30,6 +28,7 @@
         </div>
       </div>
     </div>
+    </div>
   </div>
 </template>
 <script>
@@ -38,5 +37,17 @@ export default {
   data: () => ({
     skills,
   }),
+  
 };
 </script>
+
+
+<style scoped>
+.news-img{
+  background-position: left bottom, right top;
+  margin-top: 0px;
+  background-image: url(@/assets/icons/bg.svg), url(@/assets/icons/bg.svg);
+  
+}
+
+</style>
