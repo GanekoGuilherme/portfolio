@@ -1,11 +1,20 @@
 <template>
-  <div id="app" class="flex flex-col overflow-hidden">
-    <menu-bar />
-    <router-view class="h-full overflow-x-auto" />
+  <div id="app" class="flex flex-col">
+    
+    <menu-bar />    
+    <vue-page-transition name="fade-in-right">   
+      <router-view class="h-full overflow-x-auto" />
+    </vue-page-transition>
   </div>
 </template>
 <script>
+
 import menuBar from "@/components/menu.vue";
+import Vue from 'vue'
+import VuePageTransition from 'vue-page-transition'
+ 
+Vue.use(VuePageTransition)
+
 export default {
   components: {
     menuBar,

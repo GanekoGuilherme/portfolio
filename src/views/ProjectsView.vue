@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center mx-30 mt-6 mb-5 overflow-hidden">
+  <div class="flex flex-col items-center mx-30 mt-6 mb-5 overflow-hidden relative">
     <img
       src="@/assets/icons/bg.svg"
       class="absolute top-0 right-0 z-[-5] mobile:opacity-50"

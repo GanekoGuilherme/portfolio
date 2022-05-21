@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col items-center justify-evenly mobile:justify-start mx-30 mt-6 mb-5"
+    class="flex flex-col items-center justify-evenly mobile:justify-start mx-30 mt-6 mb-5 relative"
   >
     <img
       src="@/assets/icons/bg.svg"
@@ -12,8 +12,7 @@
     >
       Guilherme Massaru Ganeko
     </h2>
-    <p class="text-xs text-secondary mb-6">BACKEND | FRONT | MOBILE</p>
-    <p class="text-sm mb-6">Destaque em desenvolvimento backend</p>
+    <p class="text-xs text-secondary mb-6">BACK-END | NODE.JS | TYPESCRIPT | EXPRESS | MONGODB</p>
     <button
       type="button"
       class="mb-5 flex items-center px-6 py-2.5 bg-primary text-white font-semibold text-xs font-family-inter uppercase rounded shadow-md hover:bg-secondary hover:shadow-lg active:bg-primary active:shadow-lg transition duration-150 ease-in-out"
@@ -25,15 +24,14 @@
         class="flex items-end text-secondary font-medium leading-[1.1rem] mb-4"
       >
         <img src="@/assets/icons/coffee.svg" class="mr-1" />
-        Resumo
+        Sobre mim
       </div>
       <p class="text-sm text-justify">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ullamcorper sit amet
-        risus nullam eget felis. Quis risus sed vulputate odio ut enim blandit
-        volutpat maecenas. Pulvinar pellentesque habitant morbi tristique
-        senectus et netus. Augue neque gravida in fermentum et sollicitudin.
-        Neque aliquam vestibulum morbi blandit.
+        Inicializei na programação em 2013 com 14 anos utilizando o kit Lego Mindstorms Nxt, aos 15 iniciei os 
+        estudos utilizando o microncontrolador Arduino. Com 16 anos, realizei o curso técnico de informática
+        pela Unesp Jaboticabal - SP onde tive o primeiro contato com JAVA e SQL. Em 2017 comecei a graduação
+        em Engenharia da Computação pelo Instituto Federal do Triângulo Mineiro (campus Avançado Uberaba Parque
+        Tecnólogico). 
       </p>
     </div>
 
@@ -48,26 +46,27 @@
           Contato
         </div>
         <p class="text-sm">
-          EMAIL: EMAIL@EMAIL.COM<br />
-          TELEFONE: (11) 9 91111-1111<br />
-          LINKEDIN: IN/LINKEDIN/<br />
-          GITHUB: /GITHUB<br />
-          CIDADE: CIDADE - UF
+          E-mail: guilhermeganeko@hotmail.com<br />
+          Telefone: (16) 9 99600-1470<br />
+          Linkedin: in/guilhermeganeko<br />
+          Github: GanekoGuilherme<br />
+          Cidade: Jaboticabal - SP
         </p>
       </div>
-      <div>
+      <div class="w-3/5 mobile:w-full">
         <div
           class="flex items-end text-secondary font-medium leading-[1.1rem] mb-4 mobile:mt-3"
         >
           <img src="@/assets/icons/coffee.svg" class="mr-1" />
           Cursos e Certificações
         </div>
-        <p class="text-sm">
-          VUEJS 2 - 2021<br />
-          VUEJS 3 - 2021<br />
-          FLUTTER - 2021<br />
-          ANDROID BÁSICO - 2020
-        </p>
+          <ul class="text-sm list-disc ml-4">
+            <li>Ministrou o minicurso: "Trabalhando no Arduino sem um Arduino" - INOVATEC 2019.</li>
+            <li>Ministrou o minicurso: "Arduino" - 4º Tecnarte 2019.</li>
+            <li>Participou no workshop: "Modelagem de Negócios" - Validation Rocket 2018</li>
+            <li>Pariticipou do curso: "Introdução ao Linux" - XXXV SETA 2015 </li>
+          </ul>
+          
       </div>
     </div>
   </div>

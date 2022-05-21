@@ -5,6 +5,7 @@
     <div
       class="w-1/2 mobile:w-full flex flex-col items-center justify-center mr-10 mobile:mr-0 mobile:mt-7"
     >
+    
       <h1
         class="font-family-poppins font-semibold text-primary text-5xl mobile:text-4xl whitespace-nowrap mb-7"
       >
@@ -18,7 +19,7 @@
       <p class="text-justify mb-7">
         Bacharel em Engenharia da Computação pelo Instituto Federal do Triângulo Mineiro (2022), comecei programar aos 14 anos. Participei de competições como os torneios FLL (First Lego League), OBR (Olímpiada Brasileira de Robótica), maratonas de programação e hackathons.
       </p>
-      <div>
+      <div class="mobile:mb-7">
         <button
           class="border-2 rounded-full border-primary hover:border-secondary p-2 active:bg-secondary ease-linear transition-all duration-100"
         >
@@ -37,7 +38,7 @@
         </button>
       </div>
     </div>
-    <img src="@/assets/dev.svg" alt="" class="w-1/2 ml-20 mobile:w-[230px] mobile:ml-0" />
+    <img src="@/assets/dev.svg" alt="" class="mobile:w-[230px] mobile:ml-0 mt-7" />
   </div>
 </template>
 
