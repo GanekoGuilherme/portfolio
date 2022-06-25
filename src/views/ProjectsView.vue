@@ -1,5 +1,7 @@
 <template>
-  <div class="flex flex-col items-center mx-30 mt-6 mb-5 overflow-hidden relative">
+  <div
+    class="flex flex-col items-center mx-30 mt-10 mb-5 overflow-hidden relative"
+  >
     <img
       src="@/assets/icons/bg.svg"
       class="absolute top-0 right-0 z-[-5] mobile:opacity-50"
@@ -54,7 +56,7 @@
       </button>
     </div>
     <div
-      class="grid lg:grid-cols-4 sm:grid-cols-2 mobile:grid-cols-1 gap-4 lg:mx-20 sm:mx-16 mobile:mx-2 overflow-auto"
+      class="grid lg:grid-cols-4 sm:grid-cols-2 mobile:grid-cols-1 gap-4 lg:mx-20 sm:mx-16 mobile:mx-2 overflow-auto mobile:mb-12"
     >
       <div v-for="(p, i) in projects" :key="i">
         <div
@@ -74,6 +76,8 @@
                   p.git,
                 'bg-gray-400 ': !p.git,
               }"
+              :href="p.git"
+              target="”_blank”"
               class="flex items-center px-3 py-2 text-white font-semibold text-xs font-family-inter uppercase rounded shadow-md"
             >
               <img
@@ -89,6 +93,8 @@
                   p.link,
                 'bg-gray-400 ': !p.link,
               }"
+              :href="p.link"
+              target="”_blank”"
               class="flex items-center px-3 py-2 text-white font-semibold text-xs font-family-inter uppercase rounded shadow-md"
             >
               <img

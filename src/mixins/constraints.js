@@ -1,27 +1,54 @@
 export const projects = [
   {
-    name: "Projeto",
+    name: "Agro Radar",
     describe:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur.",
+      "#node.js #typescript #MongoDB #Express #Mailjet #Upload-Images #JWT #hackathon",
     link: "",
-    git: "#",
+    git: "https://github.com/GanekoGuilherme/praga",
+    type: "back",
+  },
+  {
+    name: "LinQue",
+    describe:
+      "#node.js #typescript #MongoDB #Express #API-RIOT #Mailjet #JWT #AWS-S3 ",
+    link: "https://linque.vercel.app/lol/ok3n4g",
+    git: "https://github.com/GanekoGuilherme/LinQue",
+    type: "back",
+  },
+  {
+    name: "Aplicação Mobile Rapi10",
+    describe: "#flutter #gerente-projeto #firebase #geolocation #routes",
+    link: "https://www.bugware.com.br/portfolio/rapi10/",
+    git: "",
     type: "mobile",
   },
   {
-    name: "Projeto",
-    describe:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur.",
-    link: "#",
-    git: "#",
+    name: "Site Estático Apoio",
+    describe: "#gerente-projeto #wordpress #site-estático",
+    link: "https://www.bugware.com.br/portfolio/apoio/",
+    git: "",
     type: "front",
   },
   {
-    name: "Projeto",
-    describe:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur.",
-    link: "#",
-    git: "#",
-    type: "back",
+    name: "Site Estático WR",
+    describe: "#gerente-projeto #wordpress #site-estático",
+    link: "https://www.bugware.com.br/portfolio/wr-bolsas-e-uniformes/",
+    git: "",
+    type: "front",
+  },
+  {
+    name: "Site Estático AJEA",
+    describe: "#gerente-projeto #wordpress #site-estático",
+    link: "https://www.bugware.com.br/portfolio/ajea/",
+    git: "",
+    type: "front",
+  },
+  {
+    name: "Site Estático PROJEP",
+    describe: "#gerente-projeto #wordpress #site-estático",
+    link: "https://www.bugware.com.br/portfolio/projep/",
+    git: "",
+    type: "front",
   },
 ];
 export const skills = [
