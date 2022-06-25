@@ -11,7 +11,10 @@
     <p class="text-xs text-secondary mb-6">
       BACK-END | NODE.JS | TYPESCRIPT | EXPRESS | MONGODB
     </p>
-    <a href="/files/curriculo.pdf" download="Guilherme Ganeko">
+    <a
+      href="https://github.com/GanekoGuilherme/portfolio/blob/gh-pages/files/curriculo.pdf?raw=true"
+      target="_blank"
+    >
       <button
         type="button"
         class="mb-5 flex items-center px-6 py-2.5 bg-primary text-white font-semibold text-xs font-family-inter uppercase rounded shadow-md hover:bg-secondary hover:shadow-lg active:bg-primary active:shadow-lg transition duration-150 ease-in-out"

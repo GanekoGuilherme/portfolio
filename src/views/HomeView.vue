@@ -39,7 +39,10 @@
             <ln class="tag" />
           </button>
         </a>
-        <a href="/files/curriculo.pdf" download target="_blank">
+        <a
+          href="https://github.com/GanekoGuilherme/portfolio/blob/gh-pages/files/curriculo.pdf?raw=true"
+          target="_blank"
+        >
           <button
             class="border-2 rounded-full border-primary hover:border-secondary p-2 active:bg-secondary ease-linear transition-all duration-100"
             type="button"
