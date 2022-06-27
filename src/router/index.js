@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import SkillsView from "../views/SkillsView.vue";
 import ProjectsView from "../views/ProjectsView.vue";
+import EventsView from "../views/EventsView.vue";
 
 Vue.use(VueRouter);
 
@@ -16,6 +17,11 @@ const routes = [
     path: "/project",
     name: "project",
     component: ProjectsView,
+  },
+  {
+    path: "/event",
+    name: "event",
+    component: EventsView,
   },
   {
     path: "/skill",

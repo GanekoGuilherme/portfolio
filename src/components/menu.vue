@@ -43,6 +43,7 @@ export default {
       { name: "RESUMO", path: "/about" },
       { name: "HABILIDADES", path: "/skill" },
       { name: "PROJETOS", path: "/project" },
+      { name: "EVENTOS", path: "/event" },
     ],
     modal: false,
   }),
