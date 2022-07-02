@@ -10,18 +10,61 @@
       Eventos
     </h1>
     <div
+      class="grid lg:grid-cols-1 sm:grid-cols-1 mobile:grid-cols-1 lg:mx-20 sm:mx-16"
+    >
+      <div class="flex justify-center mobile:mt-4 mb-5 w-full mobile:mb-0">
+        <input
+          style="text-indent: 10px"
+          class="max-w-[700px] w-full h-12 mobile:w-36 font-medium text-lg mobile:text-base border border-primary"
+          placeholder="Buscar..."
+        />
+        <select
+          style="text-indent: 5px"
+          class="ml-5 w-[170px] bg-white mobile:w-[90px] font-low text-lg mobile:text-base border border-primary"
+        >
+          <option value="date">Data</option>
+          <option value="name">Nome</option>
+        </select>
+        <button
+          class="ml-3 h-12 font-medium text-lg mobile:text-base"
+          @click="
+            () => {
+              this.sort = !this.sort;
+            }
+          "
+        >
+          <img
+            src="@/assets/icons/arrow.svg"
+            :style="{
+              transform: `rotate( ${this.sort ? 0 : 180}deg)`,
+            }"
+            class="mr-2"
+          />
+        </button>
+        <button
+          class="ml-5 h-12 font-medium text-lg mobile:text-base"
+          @click="screen = 'front'"
+        >
+          <img src="@/assets/icons/search.svg" class="mr-2" />
+        </button>
+      </div>
+    </div>
+    <div
       class="grid lg:grid-cols-1 sm:grid-cols-1 mobile:grid-cols-1 gap-4 lg:mx-20 sm:mx-16 mobile:mx-2 overflow-auto mobile:mb-12 mb-10"
     >
       <div v-for="(p, i) in events" :key="i">
         <div
           class="drop-shadow-md bg-white rounded-lg py-5 px-6 h-[200px] flex"
         >
-          <div class="bg-black flex">
-            <img :src="require(`@/assets/files/${p.img[0]}`)" width="240" />
+          <div class="bg-black flex mobile:w-0">
+            <img
+              :src="require(`@/assets/files/${p.img[0]}`)"
+              class="w-[240px]"
+            />
           </div>
 
           <div
-            class="flex flex-col ml-4 justify-between max-w-[600px] mobile:max-w-[200px]"
+            class="flex flex-col ml-4 mobile:ml-0 justify-between max-w-[600px] mobile:max-w-[300px]"
           >
             <div>
               <p class="font-semibold uppercase text">
@@ -52,6 +95,7 @@ import { events } from "@/mixins/constraints";
 export default {
   data: () => ({
     screen: "all",
+    sort: false,
   }),
   computed: {
     events() {
