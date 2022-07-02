@@ -18,7 +18,6 @@
           class="max-w-[700px] w-full h-12 mobile:w-36 font-medium text-lg mobile:text-base border border-primary"
           placeholder="Buscar..."
           v-model="text"
-          @keyup.enter="filterFields"
         />
         <select
           style="text-indent: 5px"
@@ -49,12 +48,6 @@
             }"
             class="mr-2"
           />
-        </button>
-        <button
-          class="ml-5 h-12 font-medium text-lg mobile:text-base"
-          @click="filterFields"
-        >
-          <img src="@/assets/icons/search.svg" class="mr-2" />
         </button>
       </div>
     </div>
@@ -104,7 +97,7 @@ import { events } from "@/mixins/constraints";
 export default {
   data: function () {
     return {
-      textFilter: "",
+      text: "",
       screen: "all",
       sort: false,
       typeSort: { id: 1, text: "Data" },
@@ -114,17 +107,11 @@ export default {
       ],
     };
   },
-  methods: {
-    filterFields() {
-      console.log(this.text);
-      console.log(this.typeSort?.text);
-      this.textFilter = this.text;
-    },
-  },
+  methods: {},
   computed: {
     events() {
       let eventsSort;
-      if (this.typeSort.key === 1) {
+      if (this.typeSort.id === 1) {
         if (this.sort) {
           eventsSort = events.sort((a, b) => {
             if (a.year < b.year) return 1;
@@ -154,15 +141,12 @@ export default {
         }
       }
 
-      if (this.textFilter) {
-        console.log("filtrando por: " + this.textFilter);
+      if (this.text) {
         const eventsFiltered = [];
         eventsSort.forEach((el) => {
-          console.log(el.name, el.name.includes(this.textFilter));
-          if (el.name.toUpperCase().includes(this.textFilter.toUpperCase()))
+          if (el.name.toUpperCase().includes(this.text.toUpperCase()))
             eventsFiltered.push(el);
         });
-        console.log("aa: ", eventsFiltered);
         return eventsFiltered;
       }
       return eventsSort;
