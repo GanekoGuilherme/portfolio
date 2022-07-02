@@ -17,14 +17,23 @@
           style="text-indent: 10px"
           class="max-w-[700px] w-full h-12 mobile:w-36 font-medium text-lg mobile:text-base border border-primary"
           placeholder="Buscar..."
+          v-model="text"
+          @keyup.enter="filterFields"
         />
         <select
           style="text-indent: 5px"
           class="ml-5 w-[170px] bg-white mobile:w-[90px] font-low text-lg mobile:text-base border border-primary"
+          v-model="typeSort"
         >
-          <option value="date">Data</option>
-          <option value="name">Nome</option>
+          <option
+            v-for="opt in optionsSort"
+            :key="opt.id"
+            v-bind:value="{ id: opt.id, text: opt.name }"
+          >
+            {{ opt.name }}
+          </option>
         </select>
+
         <button
           class="ml-3 h-12 font-medium text-lg mobile:text-base"
           @click="
@@ -43,7 +52,7 @@
         </button>
         <button
           class="ml-5 h-12 font-medium text-lg mobile:text-base"
-          @click="screen = 'front'"
+          @click="filterFields"
         >
           <img src="@/assets/icons/search.svg" class="mr-2" />
         </button>
@@ -93,13 +102,70 @@
 <script>
 import { events } from "@/mixins/constraints";
 export default {
-  data: () => ({
-    screen: "all",
-    sort: false,
-  }),
+  data: function () {
+    return {
+      textFilter: "",
+      screen: "all",
+      sort: false,
+      typeSort: { id: 1, text: "Data" },
+      optionsSort: [
+        { id: 1, name: "Data" },
+        { id: 2, name: "Nome" },
+      ],
+    };
+  },
+  methods: {
+    filterFields() {
+      console.log(this.text);
+      console.log(this.typeSort?.text);
+      this.textFilter = this.text;
+    },
+  },
   computed: {
     events() {
-      return events;
+      let eventsSort;
+      if (this.typeSort.key === 1) {
+        if (this.sort) {
+          eventsSort = events.sort((a, b) => {
+            if (a.year < b.year) return 1;
+            if (a.year > b.year) return -1;
+            return 0;
+          });
+        } else {
+          eventsSort = events.sort((a, b) => {
+            if (a.year > b.year) return 1;
+            if (a.year < b.year) return -1;
+            return 0;
+          });
+        }
+      } else {
+        if (this.sort) {
+          eventsSort = events.sort((a, b) => {
+            if (a.name < b.name) return 1;
+            if (a.name > b.name) return -1;
+            return 0;
+          });
+        } else {
+          eventsSort = events.sort((a, b) => {
+            if (a.name > b.name) return 1;
+            if (a.name < b.name) return -1;
+            return 0;
+          });
+        }
+      }
+
+      if (this.textFilter) {
+        console.log("filtrando por: " + this.textFilter);
+        const eventsFiltered = [];
+        eventsSort.forEach((el) => {
+          console.log(el.name, el.name.includes(this.textFilter));
+          if (el.name.toUpperCase().includes(this.textFilter.toUpperCase()))
+            eventsFiltered.push(el);
+        });
+        console.log("aa: ", eventsFiltered);
+        return eventsFiltered;
+      }
+      return eventsSort;
     },
   },
 };
